@@ -1,0 +1,18 @@
+{
+  "name": "jules-test-project",
+  "version": "1.0.0",
+  "description": "Test project for Google Jules",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "jest",
+    "lint": "eslint src tests"
+  },
+  "keywords": ["jules", "gemini", "testing"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^29.0.0",
+    "eslint": "^8.0.0"
+  }
+}
