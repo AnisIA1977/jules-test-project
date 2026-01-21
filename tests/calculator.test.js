@@ -29,6 +29,13 @@ describe('Calculator Module', () => {
        const largeNumber = 1e15;
        expect(calculator.add(largeNumber, 1)).toBe(1000000000000001);
     });
+
+    test('should throw error for non-number inputs', () => {
+      expect(() => calculator.add('2', 3)).toThrow('Inputs must be numbers');
+      expect(() => calculator.add(2, '3')).toThrow('Inputs must be numbers');
+      expect(() => calculator.add(null, 3)).toThrow('Inputs must be numbers');
+      expect(() => calculator.add(2, undefined)).toThrow('Inputs must be numbers');
+    });
   });
 
   // Subtract Function Tests
@@ -55,6 +62,11 @@ describe('Calculator Module', () => {
        const largeNumber = 1e15;
        expect(calculator.subtract(largeNumber, 1)).toBe(999999999999999);
     });
+
+    test('should throw error for non-number inputs', () => {
+      expect(() => calculator.subtract('5', 3)).toThrow('Inputs must be numbers');
+      expect(() => calculator.subtract(5, '3')).toThrow('Inputs must be numbers');
+    });
   });
 
   // Multiply Function Tests
@@ -79,6 +91,11 @@ describe('Calculator Module', () => {
 
     test('should handle large numbers', () => {
         expect(calculator.multiply(10000, 10000)).toBe(100000000);
+    });
+
+    test('should throw error for non-number inputs', () => {
+      expect(() => calculator.multiply('2', 3)).toThrow('Inputs must be numbers');
+      expect(() => calculator.multiply(2, '3')).toThrow('Inputs must be numbers');
     });
   });
 
@@ -108,6 +125,11 @@ describe('Calculator Module', () => {
 
     test('should handle large numbers', () => {
         expect(calculator.divide(1e10, 2)).toBe(5e9);
+    });
+
+    test('should throw error for non-number inputs', () => {
+      expect(() => calculator.divide('6', 2)).toThrow('Inputs must be numbers');
+      expect(() => calculator.divide(6, '2')).toThrow('Inputs must be numbers');
     });
   });
 });

@@ -1,49 +1,61 @@
-# jules-test-project
-jules-test-project
-```markdown
-# Jules Test Project 🧮
+# Jules Agent Configuration
 
-A simple test project to learn and validate Google Jules agentic capabilities.
+## Project Context
 
-## Features
+This is a test project designed to demonstrate Google Jules capabilities.
 
-- Simple calculator with add, subtract, multiply, divide operations
-- Full test coverage with Jest
-- Code linting with ESLint
-- Comprehensive documentation
+### Technology Stack
+- **Runtime**: Node.js (v16+)
+- **Testing Framework**: Jest
+- **Linter**: ESLint
+- **Language**: JavaScript
 
-## Installation
+### Documentation
 
-\`\`\`bash
+- **[API Reference](docs/API.md)**: Detailed documentation of calculator functions (parameters, returns, examples).
+- **[User Guide](docs/GUIDE.md)**: Instructions on installation, setup, usage, and testing.
+
+### Quick Start
+
+#### Installation
+
+```bash
 npm install
-\`\`\`
+```
 
-## Running Tests
+#### Running Tests
 
-\`\`\`bash
+```bash
 npm test
-\`\`\`
+```
 
-## Project Structure
+### Module Overview
 
-├── src/
-│ └── calculator.js # Core calculator module
-├── tests/
-│ └── calculator.test.js # Unit tests
-├── AGENTS.md # Jules configuration
-├── package.json # Dependencies
-└── README.md # This file
+The `src/calculator.js` module provides the following functions:
 
-text
+- `add(a, b)`: Adds two numbers.
+- `subtract(a, b)`: Subtracts `b` from `a`.
+- `multiply(a, b)`: Multiplies two numbers.
+- `divide(a, b)`: Divides `a` by `b`.
 
-## Using with Jules
+See [docs/API.md](docs/API.md) for more details.
 
-This project is designed to showcase Jules capabilities. See AGENTS.md for detailed agent instructions.
+### Development Workflow
 
-### Example Tasks for Jules
+1. **Make changes** in `src/` directory
+2. **Write tests** in `tests/` directory with `test.js` suffix
+3. **Run tests** with `npm test`
+4. **Lint code** with `npm run lint`
 
-1. "Add comprehensive unit tests for all calculator functions"
-2. "Create a Math utilities module with advanced operations"
-3. "Generate API documentation for the calculator module"
-4. "Refactor calculator.js to use TypeScript"
-5. "Add error handling and validation"
+### Conventions
+
+- Use **JSDoc** comments for all functions
+- Keep functions **pure** (no side effects)
+- Test **happy path** and **edge cases**
+- Use **descriptive variable names**
+
+### Known Limitations
+
+- No external API calls
+- No database operations
+- Simple arithmetic only (for now)
